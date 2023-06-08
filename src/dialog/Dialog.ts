@@ -1,11 +1,11 @@
-import {Component, createApp} from 'vue';
+import {Component, ComponentOptions, createApp} from 'vue';
 import ConfirmDialogComponent from './ConfirmDialogComponent.vue';
 
 export class Dialog {
     // TODO: implement
     protected component: Component | null;
     protected title: string;
-    protected componentInstance: Component | null;
+    protected componentInstance: ComponentOptions | null;
     protected resolveFunc: ((value: boolean) => void) | null;
     // create an ID for each dialog
     protected dialogId: number = Math.floor(Math.random() * 1000);
